@@ -2,13 +2,14 @@
 var app = app || {};
 
 (function(module) {
-  const aboutController = {};
+  const adminController = {};
 
-  aboutController.showAbout = () => {
+  adminController.showAdmin = () => {
     $('.tab-content').hide();
-    $('#about').fadeIn();
+    $('#admin').fadeIn();
+    app.articleView.initAdminPage();
   }
   // DONE: Define a function that hides all main section elements, and then reveals just the #about section:
 
-  module.aboutController = aboutController;
+  module.adminController = adminController;
 })(app);
