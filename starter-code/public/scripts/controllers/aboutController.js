@@ -2,10 +2,12 @@
 var app = app || {};
 
 (function(module) {
-  const aboutController = {};
+  const aboutController = () => {
+    $('.tab-content').hide();
+    $('#about').show();
+  };
 
-  // TODO: Define a function that hides all main section elements, and then reveals just the #about section:
-
+  // TO/DO: Define a function that hides all main section elements, and then reveals just the #about section:
 
   module.aboutController = aboutController;
 })(app);
