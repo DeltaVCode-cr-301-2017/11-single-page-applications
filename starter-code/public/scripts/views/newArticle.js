@@ -43,6 +43,6 @@ var app = app || {};
     window.location = '../';
   };
 
-  newArticle.initNewArticlePage();
+  //newArticle.initNewArticlePage();
   module.newArticle = newArticle;
 })(app);

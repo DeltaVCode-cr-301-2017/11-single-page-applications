@@ -1,17 +1,7 @@
 'use strict';
 var app = app || {};
 
-page('/', () => {
-  $('.tab-content').hide();
-  $('#articles').fadeIn();
-  app.Article.fetchAll(app.articleView.initIndexPage)
-});
-page('/about', () => {
-  $('.tab-content').hide();
-  $('#about').fadeIn();
-});
-
-
+page('/', app.articleController);
 page('/admin', app.Article.fetchAll(app.adminView.initAdminPage));
 page('/new', app.newArticle.initNewArticlePage());
 

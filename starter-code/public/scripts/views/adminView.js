@@ -13,6 +13,6 @@ var app = app || {};
     }
   };
 
-  app.Article.fetchAll(adminView.initAdminPage);
+  //app.Article.fetchAll(adminView.initAdminPage);
   module.adminView = adminView;
 })(app);
