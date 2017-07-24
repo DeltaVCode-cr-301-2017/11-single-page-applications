@@ -2,7 +2,9 @@
 var app = app || {};
 
 (function(module) {
-  const aboutController = () => {
+  const aboutController = {};
+
+  aboutController.init = function() {
     $('.tab-content').hide();
     $('#about').show();
   };
