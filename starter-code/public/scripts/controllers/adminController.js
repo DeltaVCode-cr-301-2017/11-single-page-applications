@@ -7,6 +7,7 @@ var app = app || {};
   adminController.showAdmin = () => {
     $('.tab-content').hide();
     $('#admin').fadeIn();
+    app.articleView.initAdminPage();
   }
   // DONE: Define a function that hides all main section elements, and then reveals just the #about section:
 
