@@ -3,6 +3,10 @@ var app = app || {};
 
 page('/', app.articleController.showArticle);
 page('/about', app.aboutController.showAbout);
+page('/admin', app.adminController.showAdmin);
+page('*', function(){
+  $('body').text('Not Found');
+})
 
 page();
 // DONE: Configure routes for this app with page.js, by registering each URL your app can handle, linked to a a single controller function to handle it. Note that these routes do not need to wrapped in an IIFE.

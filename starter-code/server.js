@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
 app.get('/new', (request, response) => response.sendFile('new.html', {root: './public'}));
-app.get('/admin', (request, response) => response.sendFile('admin.html', {root: './public'}));
+
 app.get('/articles', (request, response) => {
   client.query(`
     SELECT * FROM articles
@@ -27,6 +27,8 @@ app.get('/articles', (request, response) => {
     .then(result => response.send(result.rows))
     .catch(console.error);
 });
+
+app.get('*', (request, response) => response.sendFile('index.html', {root: './public'}));
 
 app.post('/articles', function(request, response) {
   client.query(
