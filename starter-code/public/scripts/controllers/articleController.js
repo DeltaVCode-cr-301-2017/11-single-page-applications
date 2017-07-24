@@ -5,10 +5,10 @@ var app = app || {};
   const articleController = {};
 
   articleController.init = function() {
-    app.Article.fetchAll();
-    app.Article.toHtml();
     $('.tab-content').hide();
     $('#articles').show();
+    Article.fetchAll();
+    Article.toHtml();
   }
   // TO/DO: Setup a function that kicks off the fetching and rendering of articles, using the same
   // code that used to be in index.html.
